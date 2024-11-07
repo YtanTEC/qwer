@@ -1,132 +1,113 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.background {
-    width: 100vw;
-    height: 100vh;
-    background-color: #f1a26e;
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Barra de pesquisa */
+.search {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Seção de perguntas */
+.questions {
+    margin: 30px auto;
+    width: 80%;
+}
+
+.questions h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.question-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
 }
 
-.infinite-words,
-.hover-words {
-    height: 50px;
-    font-family: 'Lilita One', cursive;
-    font-size: 50px;
-    text-transform: uppercase;
-    display: flex;
-    overflow: hidden;
+.question {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.infinite-words p,
-.hover-words p,
-.click-words p {
-    color: #fff;
-    margin-right: 15px;
+.question h3 {
+    font-size: 20px;
 }
 
-.infinite-words ul li,
-.hover-words ul li,
-.click-words ul li {
-    list-style-type: none;
-    color: #351710;
+.question p {
+    font-size: 14px;
+    color: #555;
 }
 
-.hover-words {
-    margin: 80px 0;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-.click-words {
-    font-family: 'Lilita One', cursive;
-    font-size: 50px;
-    text-transform: uppercase;
-    display: flex;
-}
-
-.infinite-words ul {
-    animation: infiniteWord 8s ease infinite;
-}
-
-.hover-words ul {
-    transform: translate(0, 57px);
-}
-
-.hover-words:hover ul {
-    animation: hoverWord 1s ease 1;
-}
-
-.click-words.active-animation ul li {
-    animation: clickWord .5s ease 1 forwards;
-}
-
-@keyframes infiniteWord {
-    from {
-        transform: translate(0, 0);
-    }
-    10% {
-        transform: translate(0, 0);
-    }
-    20% {
-        transform: translate(0, -57px);
-    }
-    30% {
-        transform: translate(0, -57px);
-    }
-    40% {
-        transform: translate(0, -114px);
-    }
-    50% {
-        transform: translate(0, -114px);
-    }
-    60% {
-        transform: translate(0, -171px);
-    }
-    70% {
-        transform: translate(0, -171px);
-    }
-    80% {
-        transform: translate(0, -228px);
-    }
-    90% {
-        transform: translate(0, -228px);
-    }
-    to {
-        transform: translate(0, -285px);
-    }
-}
-
-@keyframes hoverWord {
-    from {
-        transform: translate(0, 57px);
-    }
-    35% {
-        transform: translate(0, 0px);
-    }
-    70% {
-        transform: translate(0, 0px);
-        opacity: 1;
-    }
-    to {
-        transform: translate(200px, 0px);
-        opacity: 0;
-    }
-}
-
-@keyframes clickWord {
-    from {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(2);
-        opacity: 1;
-    }
-    to {
-        transform: scale(2.2);
-        opacity: 0;
-    }
+footer p {
+    font-size: 14px;
 }
