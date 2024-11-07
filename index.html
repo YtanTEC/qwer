@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Animation</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstudaAqui - Perguntas e Respostas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="background">
-        <div class="hidden-words">
-            <div class="infinite-words">
-                <p>Agencia Web-Mars é: </p>
-                <ul>
-                    <li>Aberta</li>
-                    <li>Inovadora</li>
-                    <li>Sem-Limite</li>
-                    <li>Sem-Fronteira</li>
-                    <li>Técnologica</li>
-                    <li>Espetacular</li>
-                </ul>
-            </div>
-            <div class="hover-words">
-                <p>Passe o mouse</p>
-                <ul>
-                    <li>Aqui!</li>
-                </ul>
-            </div>
-            <div class="click-words">
-                <p>Clique aqui</p>
-                <ul>
-                    <li>veja</li>
-                </ul>
-            </div>
+    <header>
+        <div class="logo">
+            <h1>EstudaAqui</h1>
         </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Perguntas</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="search">
+        <input type="text" placeholder="O que você está aprendendo?" class="search-bar">
+        <button>Pesquisar</button>
+    </section>
 
-    <script>
-        document.getElementsByClassName("click-words")[0].addEventListener("click", function() {
-            var classe = this.getAttribute("class") + " active-animation";
-            this.setAttribute("class", classe);
-        })
-    </script>
+    <section class="questions">
+        <h2>Perguntas Populares</h2>
+        <div class="question-list">
+            <div class="question">
+                <h3>Como resolver equações do 2º grau?</h3>
+                <p>Respostas: 3 | Votação: 8.5/10</p>
+                <button>Ver mais</button>
+            </div>
+            <div class="question">
+                <h3>Qual a principal causa da Revolução Francesa?</h3>
+                <p>Respostas: 5 | Votação: 9/10</p>
+                <button>Ver mais</button>
+            </div>
+            <!-- Mais perguntas aqui -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EstudaAqui. Todos os direitos reservados.</p>
+    </footer>
 </body>
-
 </html>
